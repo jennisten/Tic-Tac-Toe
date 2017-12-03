@@ -95,7 +95,6 @@ function playTheGame () {
     }
 // adding game "brains", has the player in turn won with choosing this box?
     if (chosenBox.id === "box1") {
-      console.log('hi there stage 1');
         if(playerTable.includes('box2') && playerTable.includes('box3')) {
             finish(playerTurn);
         } else if(playerTable.includes('box4') && playerTable.includes('box7')) {
@@ -192,14 +191,12 @@ function playTheGame () {
       if (playerTurn == 1) {
         chosenBox.setAttribute('class', 'box box-filled-1 occupied');
         player1Table.push(chosenBox.id);
-        console.log(player1Table);
         playerTurn = 2;
         player2.setAttribute('class', 'players active players-turn');
         player1.classList.remove('active', 'players-turn');
       } else if (playerTurn == 2) {
         chosenBox.setAttribute('class', 'box box-filled-2 occupied');
         player2Table.push(chosenBox.id);
-        console.log(player2Table);
         playerTurn = 1;
         player1.setAttribute('class', 'players active players-turn');
       player2.classList.remove('active', 'player-turn');
